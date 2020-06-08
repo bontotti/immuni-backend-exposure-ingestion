@@ -209,7 +209,7 @@ async def check_otp(request: Request, is_dummy: bool, padding: str) -> HTTPRespo
     :param padding: the dummy data sent to protect against analysis of the traffic size.
     :return: 204 if the OTP is valid, 400 on SchemaValidationException, 401 on unauthorised OTP.
     """
-    
+
     # Dummy requests are currently being filtered at the reverse proxy level,
     # emulating the same behavior implemented below and introducing a response delay.
     # We may re-evaluate this decision in the future
